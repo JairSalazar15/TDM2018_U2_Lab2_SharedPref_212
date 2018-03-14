@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tdm2018.ittepic.edu.tdm2018_u2_lab2_sharedpref_212.MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/editTextNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextNombre"
+        android:layout_below="@+id/editTextNombre"
+        android:ems="10"
+        android:hint="Numero"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editTextDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextNum"
+        android:layout_below="@+id/editTextNum"
+        android:ems="10"
+        android:hint="Direccion"
+        android:inputType="textPostalAddress" />
+
+    <EditText
+        android:id="@+id/editTextInicio"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextFin"
+        android:layout_alignBottom="@+id/editTextFin"
+        android:layout_alignStart="@+id/editTextFecha"
+        android:ems="10"
+        android:hint="Inicio"
+        android:inputType="time" />
+
+    <EditText
+        android:id="@+id/editTextFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextDir"
+        android:layout_below="@+id/editTextDir"
+        android:ems="10"
+        android:hint="Fecha"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/editTextFin"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/checkBoxLuj"
+        android:layout_below="@+id/editTextFecha"
+        android:ems="10"
+        android:hint="Fin"
+        android:inputType="time" />
+
+    <EditText
+        android:id="@+id/editTextPlatillos"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextFecha"
+        android:layout_below="@+id/editTextFin"
+        android:layout_marginEnd="13dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextPostres"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextPlatillos"
+        android:layout_below="@+id/editTextPlatillos"
+        android:ems="10"
+        android:inputType="number" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBasic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPostres"
+        android:layout_marginTop="22dp"
+        android:layout_toStartOf="@+id/editTextFin"
+        android:text="Basica" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLuj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextFecha"
+        android:layout_alignTop="@+id/checkBoxBasic"
+        android:text="Lujo" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextInicio"
+        android:layout_below="@+id/checkBoxBasic"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_below="@+id/seekBar"
+        android:layout_marginTop="23dp"
+        android:onClick="save"
+        android:text="Guardar" />
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/checkBoxLuj"
+        android:layout_alignTop="@+id/btnGuardar"
+        android:onClick="retrieve"
+        android:text="Mostrar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_below="@+id/checkBoxBasic"
+        android:text="Meseros" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/btnMostrar"
+        android:text="Platillos" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkBoxBasic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Postres" />
+</RelativeLayout>
